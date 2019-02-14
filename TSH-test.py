@@ -16,10 +16,10 @@ import pytest
                                                  ])
 def test_diagnosis_tsh(test_list, expected):
     """
-
+    import diagnose func to test the function
     :param test_list: TSH results
     :param expected: Diagnosis results
-
+    :return True or False of the expectation
     """
     from dictionary import diagnose
     answer = diagnose(test_list)

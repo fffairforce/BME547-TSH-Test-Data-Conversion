@@ -5,8 +5,13 @@ def main():
 
 
 def read_txt():
-	"""	to make sure the file can be read till END is detected.
-	which is able for the module to work on different length of data file
+	"""	Patient information is stored to list by lines.
+	It's a common problem that data have different size and people tend to place END to indicate a end of file.
+	In order to make sure the file can be read till END is detected, detective logical syntax 'while not' is used.
+	Args:
+		input txt file
+	Returns:
+		list: lines of test data
 	"""
 	i = 0
 	text_file = []
@@ -29,7 +34,6 @@ class Person:
 		test (float): tsh results lists
 		diagnosis (str): to check if the patient is "hyperthyroidism",
 		"hypothyroidism", or has "normal thyroid function"
-
 	"""
 
 	def __init__(self, firstname, lastname, age, gender, test, diagnosis):
@@ -80,6 +84,9 @@ def output_patient(y):
 	* gender
 	* diagnosis
 	* TSH
+	Args:
+		person_info(list): person information returned from read_txt()
+
 	"""
 	import json
 	i = 0
@@ -100,6 +107,20 @@ def output_patient(y):
 
 
 def diagnose(t):
+	"""
+	Diagnose the patients TSH result and come up with a diagnosis of:
+	"hyperthyroidism" as defined by any of their tests results  being less than 1.0.
+	"hypothyroidism" as defined by any of their test results being greater than 4.0.
+	"normal thyroid function" as defined by all of their test results being between 1.0 and 4.0, inclusive.
+	the input data lists as:
+	TSH, result1, result2, result3, etc.
+
+	Args:
+		t(str):  TSH test line from test_data.txt
+	Returns:
+		tests_values(float) = sorted test results
+		result(str) =  diagnosis
+	"""
 	test_values = t.split(",")
 	test_values = [x for x in test_values if "TSH" not in x]
 	test_values = list(map(float, test_values))
