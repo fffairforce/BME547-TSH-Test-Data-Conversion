@@ -120,6 +120,7 @@ def diagnose(t):
 	Returns:
 		tests_values(float) = sorted test results
 		result(str) =  diagnosis
+
 	"""
 	test_values = t.split(",")
 	test_values = [x for x in test_values if "TSH" not in x]

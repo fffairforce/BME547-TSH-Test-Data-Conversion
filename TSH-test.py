@@ -14,6 +14,7 @@ import pytest
                                                   "normal thyroid function"),
                                                  ([0.5], "Hyperthyroidism")  # test different length of list
                                                  ])
+
 def test_diagnosis_tsh(test_list, expected):
     """
     import diagnose func to test the function
