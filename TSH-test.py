@@ -27,4 +27,3 @@ def test_diagnosis_tsh(test_list, expected):
     from dictionary import diagnose
     answer = diagnose(test_list)
     assert answer == expected
-
