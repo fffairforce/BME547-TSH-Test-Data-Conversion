@@ -1,5 +1,14 @@
 import pytest
 
+"""
+Just don't know how keep warning wrong pep8
+when putting right below def test_diagnosis_tsh(test_list, expected):
+import diagnose func to test the function
+:param test_list: TSH results
+:param expected: Diagnosis results
+:return True or False of the expectation
+"""
+
 
 @pytest.mark.parametrize("test_list, expected", [([2.0, 1.5, 3.1, 2.5,
                                                    1.1, 3.0, 1.9, 0.3,
@@ -14,14 +23,7 @@ import pytest
                                                   "normal thyroid function"),
                                                  ([0.5], "Hyperthyroidism")  # test different length of list
                                                  ])
-
 def test_diagnosis_tsh(test_list, expected):
-    """
-    import diagnose func to test the function
-    :param test_list: TSH results
-    :param expected: Diagnosis results
-    :return True or False of the expectation
-    """
     from dictionary import diagnose
     answer = diagnose(test_list)
     assert answer == expected
