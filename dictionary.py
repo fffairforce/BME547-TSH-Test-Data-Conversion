@@ -1,7 +1,7 @@
 def main():
 	f = read_txt()
-	patient_info = new_person(f)
-	output_patient(patient_info)
+	person_info = new_person(f)
+	output_patient(person_info)
 
 
 def read_txt():
@@ -41,33 +41,33 @@ class Person:
 		self.diagnosis = diagnosis
 
 
-def new_person(person_info):
+def new_person(n):
 	"""
 	introduce information in txt file to class [person] as objects
 
 	Args:
-		person_info (list): information of patients from read_txt()
+		n (list): information of patients from read_txt()
 
 	Return:
 		list: patient class object
 	"""
 	patients = []
 	i = 0
-	# j = 1
-	while i < len(person_info):
-		name = person_info[i].split()
-		diagnosis = diagnose(person_info[i+3])
+	j = 1
+	while i < len(n):
+		name = n[i].split()
+		diagnosis = diagnose(n[i+3])
 		patients.append(Person(
 							name[0],  # first name
 							name[1],  # last name
-							int(person_info[i+1]),  # age
-							person_info[i+2],  # gender
+							n[i+1],  # age
+							n[i+2],  # gender
 							diagnosis[1],  # diagnosis results
 							diagnosis[0],  # tests
 							)
 						)
-	i += 4
-	# j += 1
+		i += 4
+		j += 1
 	return patients
 	
 
