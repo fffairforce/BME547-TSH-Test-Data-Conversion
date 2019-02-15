@@ -63,8 +63,8 @@ def new_person(n):
             name[1],  # last name
             n[i + 1],  # age
             n[i + 2],  # gender
-            diagnosis[1],  # tsh
-            (diagnosis[0]),  # diagnosis
+            diagnosis[0],  # tsh
+            diagnosis[1],  # diagnosis
         )
         )
         i += 4
