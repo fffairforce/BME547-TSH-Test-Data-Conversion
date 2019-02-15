@@ -20,7 +20,8 @@ def read_txt():
 
 class Person:
     """
-    Person class stores patient information including firstname, lastname, age, gender, tsh results, diagnosis.
+    Person class stores patient information including firstname, lastname, age,
+     gender, tsh results, diagnosis.
     Args:
         firstname (str): first name
         lastname (str): last name
@@ -62,8 +63,8 @@ def new_person(n):
             name[1],  # last name
             n[i + 1],  # age
             n[i + 2],  # gender
-            diagnosis[1],  # diagnosis results
-            diagnosis[0],  # tests
+            diagnosis[0],  # diagnosis results
+            str(diagnosis[1]),  # tests
         )
         )
         i += 4
@@ -92,7 +93,8 @@ def output_patient(y):
             "TSH": y[i].test,
             "Diagnosis": y[i].diagnosis
         }
-        out_file = open("{},{}.json".format(y[i].firstname, y[i].lastname), "w")
+        out_file = open("{},{}.json".format(y[i].firstname, y[i].lastname),
+                        "w")
 
         json.dump(dic_person, out_file)
         out_file.close()
