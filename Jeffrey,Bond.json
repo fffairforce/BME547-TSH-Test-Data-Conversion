@@ -1,3 +1,1 @@
-{"Firstname": "Jeffrey", "Lastname": "Bond", "Age": "77", "Gender": "Male",
-  "TSH": [0.2, 0.2, 0.5, 1.0, 1.4, 2.0, 2.0, 2.2, 2.3, 2.4, 2.6],
-  "Diagnosis": "Hyperthyroidism"}
+{"Firstname": "Jeffrey", "Lastname": "Bond", "Age": "77", "Gender": "Male", "TSH": [0.2, 0.2, 0.5, 1.0, 1.4, 2.0, 2.0, 2.2, 2.3, 2.4, 2.6], "Diagnosis": "Hyperthyroidism"}

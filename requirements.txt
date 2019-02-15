@@ -1,3 +1,5 @@
 #requirements.txt
+pycodestyle
 pytest
 pytest-pep8
+sphinx
