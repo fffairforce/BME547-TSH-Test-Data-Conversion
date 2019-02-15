@@ -4,7 +4,7 @@ import pytest
 @pytest.mark.parametrize("test_list, expected", [([2.0, 1.5, 3.1, 2.5,
                                                    1.1, 3.0, 1.9, 0.3,
                                                    0.7, 1.8, 2.2, 3.7],
-                                                  "Hyperthyroidism"),  # test the efficacy of diagnosis function
+                                                  "Hyperthyroidism"),
                                                  ([2.8, 3.6, 3.3, 4.5,
                                                   5.5, 5.0, 6.6, 3.5,
                                                   2.7, 4.4, 4.1, 4.8],
@@ -12,7 +12,7 @@ import pytest
                                                  ([3.5, 1.2, 2.3, 2.8,
                                                    2.9, 2.6, 3.5, 1.3],
                                                   "normal thyroid function"),
-                                                 ([0.5], "Hyperthyroidism")  # test different length of list
+                                                 ([0.5], "Hyperthyroidism")
                                                  ])
 def test_diagnosis_tsh(test_list, expected):
     """
